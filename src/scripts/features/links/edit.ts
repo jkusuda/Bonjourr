@@ -41,7 +41,7 @@ const domiconurl = document.getElementById('e-icon-url') as HTMLInputElement
 
 // for keybinds
 const domkeybind = document.getElementById('e-keybind') as HTMLInputElement
-const domkeybindclear = document.getElementById('e-keybind-clear') as HTMLButtonElement
+const domkeybindclear = document.getElementById('edit-keybind-clear') as HTMLButtonElement
 
 let inputToFocus: HTMLInputElement
 let buttonToSubmit: HTMLButtonElement
@@ -224,7 +224,7 @@ function toggleEditInputs(): string[] {
 		} else if (target.folder) {
 			inputs = ['title', 'delete', 'apply']
 		} else if (target.link) {
-			inputs = ['title', 'url*', 'icon', 'icon-url*', 'delete', 'refresh', 'apply', 'keybind']
+			inputs = ['title', 'url*', 'icon', 'icon-url*', 'delete', 'refresh', 'apply', 'keybind', 'keybind-clear']
 		} else {
 			inputs = ['title', 'url*', 'add']
 			inputToFocus = domurl
@@ -238,7 +238,7 @@ function toggleEditInputs(): string[] {
 		} else if (selectall) {
 			inputs = ['delete', 'unfolder']
 		} else if (target.link) {
-			inputs = ['title', 'url*', 'icon', 'icon-url*', 'delete', 'apply', 'unfolder']
+			inputs = ['title', 'url*', 'icon', 'icon-url*', 'delete', 'apply', 'unfolder', 'keybind', 'keybind-clear']
 		} else {
 			inputs = ['title', 'url*', 'add']
 			inputToFocus = domurl
@@ -531,7 +531,7 @@ function applyLinkChanges(_origin: 'inputs' | 'button') {
 			},
 			file: iconFile,
 			// save keybind
-			keybind: domkeybind.value || undefined,
+			keybind: domkeybind.value,
 		},
 	})
 
