@@ -62,7 +62,10 @@
 						<option value="url" class="trn">URL</option>
 					</select>
 				</label>
-
+				<label id="edit-keybind">
+					<span class="trn">Keybind</span>
+					<input id="e-keybind" type="text" name="e-keybind" readonly placeholder="Press a key..." />
+				</label>
 				<label id="edit-icon-file">
 					<span class="trn">File</span>
 					<input id="e-icon-file" type="file" name="edit-icon-file" accept="image/*" />
@@ -192,7 +195,12 @@
 
 					<span class="trn">Remove from folder</span>
 				</button>
-
+				<button type="button" id="edit-keybind-clear" class="trn">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+					</svg>
+					<span class="trn">Clear keybind</span>
+				</button>
 				<button type="submit" id="edit-apply">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
